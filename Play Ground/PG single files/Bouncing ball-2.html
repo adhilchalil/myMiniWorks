@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            Bouncing Ball Animation #JS
+        </title>
+        <style>
+        .container {
+            height: 100%;
+            width: 100%;
+            border: 2px solid black;
+            background-color: skyblue;
+            position: relative;
+        }
+        .ball {
+            height: 5%;
+            width: 5%;
+            border-radius: 50%;
+            position: absolute;
+            left: 0%;
+            bottom: 0%;
+            background-color: red;
+            border: 2px solid black;
+        }
+        </style>
+    </head>
+        <div class="container">
+            <div class="ball"></div>
+        </div>
+        <script>
+            window.onload = function() {
+    posx = 1;
+    posy = 1;
+    vx = 3;
+    vy = 10;
+    vinitial=10;
+    timer=0;
+    var ball = document.getElementsByClassName("ball");
+    var container = document.getElementsByClassName("container");
+    var ht=window.innerHeight;
+    var wt=window.innerWidth;
+    container[0].style.height = ht-50;
+    container[0].style.width = wt-50;
+    var t = setInterval(move, 10);
+    ball[0].style.height=ht/20;
+    ball[0].style.width=ht/20;
+    function move()
+    {
+        timer = timer + 0.01;
+        vy = vy - 0.1;
+        if( posx >= wt-(ht/20)-54 || posx <= 0) {
+            vx *= -1;
+        }
+        if (posy >= ht-(ht/20)-54 || posy <= 0) {
+            vy = vinitial*0.9 ;
+            vinitial = vy;
+        }
+        posx += vx;
+        posy += vy;
+        if(posy <= 0){
+            posy = 0;
+        }
+        ball[0].style.left = posx;
+        ball[0].style.bottom = posy;          
+    }
+}
+        </script>
+    </body>
+</html>
