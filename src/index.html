@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+        <title>Recipe Finder</title>
+    </head>
+    
+    <body>
+        <div id="main">
+            <header class="searchcontainer">
+                <img src="./img/favicon.png" alt="Logo" class="site_icon">
+                <form class="search">
+                    <input type="text" class="search_field" placeholder="Enter the recipe to Search">
+                    <button class="btn search__btn">
+                        <span>Search</span>
+                    </button>
+                </form>
+                <div class="likes">
+                    <div class="likes__field">
+                        <svg class="likes__icon">
+                            <use href="img/icons.svg#icon-heart"></use>
+                        </svg>
+                    </div>
+                    <div class="likes__panel">
+                        <ul class="likes__list">
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="result_container">
+                <div class="submain_left">
+                    <ul class="results_list">
+                    </ul>
+                    <div class="results_pages">
+                    </div>
+                </div>
+                <div class="submain_mid"></div>
+                <div class="submain_right">
+                    <h2 class="heading-2">My Shopping List</h2>
+                    <ul class="shopping__list"></ul>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
